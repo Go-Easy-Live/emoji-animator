@@ -1,0 +1,58 @@
+body{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  font-size: 2em;
+}
+
+.screen-container{
+  height: 70vh;
+  width: 65vw;
+  background: #000;
+  position: relative;
+  overflow: hidden;
+}
+
+.trigger-animation{
+  cursor: pointer;
+  background: #ddd;
+  padding: 5px 20px;
+  border-radius: 10px;
+  transition: background .3s ease;
+}
+
+.trigger-animation:hover{
+  background: #eee;
+}
+
+.animated-emoji{
+  position: absolute;
+  top: 120%;
+  height: 2em;
+  width: 2em;
+  mix-blend-mode: unset;
+  pointer-events: none;
+}
+
+@keyframes wave {
+  from {
+    top : 120%;
+    transform: translateX(200%);
+  }
+  25% {
+    transform: translateX(-200%);
+  }
+  40% {
+    transform: translateX(200%);
+  }
+  75% {
+    transform: translateX(-220%);
+  }
+  to {
+    top : -20%;
+    transform: translateX(0);
+  }
+}
